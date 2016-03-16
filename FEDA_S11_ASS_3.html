@@ -1,0 +1,25 @@
+<!--Make use of NgDbclick event directive on the button to show an alert.-->
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>AngularJS Directives</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script type="text/javascript">
+			var module = angular.module('myApp', []);
+			module.controller('firstCtrl', function($scope){
+				$scope.showAlert = function(){
+					alert('Double Clicked');
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<center>
+			<div ng-controller="firstCtrl">
+				Double Click on the button to show an alert.<br/><br/>
+				<button ng-DBLclick="showAlert()">Double Click Me</button>
+			</div>
+		</center>
+	</body>
+</html>
